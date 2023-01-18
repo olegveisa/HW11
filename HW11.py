@@ -21,7 +21,7 @@ class Name(Field):
         if value.isalpha:
             self.__private_name = value
         else:
-            raise Exception('Wrong name')
+            raise ValueError('Wrong name')
 
 class Phone(Field):
     
@@ -42,7 +42,7 @@ class Phone(Field):
             if value.isdigit() == True:
                 self.__private_value = value
             else:
-                raise Exception ('Wrong number')
+                raise ValueError('Wrong number')
 
 class Birthday(Field):
 
